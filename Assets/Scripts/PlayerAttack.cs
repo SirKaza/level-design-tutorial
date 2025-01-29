@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     private GameObject attackArea = default;
+    [SerializeField] private GameObject weapon;
 
     private bool attacking = false;
 
@@ -18,7 +19,7 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && weapon != null && weapon.activeSelf)
         {
             Attack();
         }

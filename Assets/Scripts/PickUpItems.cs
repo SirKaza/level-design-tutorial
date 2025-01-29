@@ -4,6 +4,8 @@ public class PickUpItems : MonoBehaviour
 {
     private bool playerInRange = false;
 
+    [SerializeField] private GameObject weapon;
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -25,6 +27,10 @@ public class PickUpItems : MonoBehaviour
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             Destroy(gameObject);
+            if (weapon != null)
+            {
+                weapon.SetActive(true);
+            }
         }
     }
 }
