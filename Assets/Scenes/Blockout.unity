@@ -22482,11 +22482,11 @@ PrefabInstance:
     - target: {fileID: 6677002327351272498, guid: 67a90fb3c8be9174fa66506456eb911e, type: 3}
       propertyPath: textLeft
       value: 
-      objectReference: {fileID: 2057466612}
+      objectReference: {fileID: 0}
     - target: {fileID: 6677002327351272498, guid: 67a90fb3c8be9174fa66506456eb911e, type: 3}
       propertyPath: textRight
       value: 
-      objectReference: {fileID: 2057466613}
+      objectReference: {fileID: 0}
     - target: {fileID: 7467421841815102478, guid: 67a90fb3c8be9174fa66506456eb911e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.47
@@ -22595,7 +22595,7 @@ PrefabInstance:
     - target: {fileID: 8480665155849880385, guid: 77bfb3ff807b6fe4e8f72d744aff6536, type: 3}
       propertyPath: destination
       value: 
-      objectReference: {fileID: 564533722}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23265,8 +23265,6 @@ Transform:
   - {fileID: 169390019}
   - {fileID: 57725272}
   - {fileID: 1004555996}
-  - {fileID: 714043244}
-  - {fileID: 1637838488}
   - {fileID: 1244607594}
   - {fileID: 1540235009}
   - {fileID: 1132070124}
@@ -23274,6 +23272,7 @@ Transform:
   - {fileID: 1661811722}
   - {fileID: 2016512141}
   - {fileID: 1589059985}
+  - {fileID: 2085668930}
   m_Father: {fileID: 1645527800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &798690822 stripped
@@ -28252,6 +28251,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 377d246ab0484a6468a31342669e8410, type: 3}
+--- !u!4 &2085668930 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5578519005797735232, guid: 377d246ab0484a6468a31342669e8410, type: 3}
+  m_PrefabInstance: {fileID: 2085668929}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2111971950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48727,7 +48731,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 2057466611}
   - {fileID: 1668903900}
   - {fileID: 4097882165689221724}
   - {fileID: 1645527800}
@@ -48736,3 +48739,5 @@ SceneRoots:
   - {fileID: 57567604}
   - {fileID: 802602393}
   - {fileID: 1092037493}
+  - {fileID: 618541974}
+  - {fileID: 613999306}
