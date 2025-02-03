@@ -1,36 +1,27 @@
 using UnityEngine;
 
-public class PlatformMovement : MonoBehaviour
+public class PlatformsMovement : MonoBehaviour
 {
-    public float detectionDistance = 2.0f;
-    public float movementSpeed = 2.0f;
-    public float targetHeight = -3f;
+    public float speed = 2f;
+    public float hiddenOffset = 10f;
+    private Vector3 originalPosition;
+    private Vector3 hiddenPosition;
+    private bool playerInside = false;
 
-    private Vector3 initialPosition;
-
-    private void Start()
+    void Start()
     {
-        initialPosition = transform.position;
+        originalPosition = transform.position;
+        hiddenPosition = new Vector3(originalPosition.x, originalPosition.y - hiddenOffset, originalPosition.z);
     }
 
-    private void Update()
+    void Update()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null) return;
+        Vector3 target = playerInside ? originalPosition : hiddenPosition;
+        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+    }
 
-        float distance = Vector2.Distance(
-            new Vector2(transform.position.x, transform.position.z),
-            new Vector2(player.transform.position.x, player.transform.position.z)
-        );
-
-        Vector3 targetPosition = distance <= detectionDistance
-            ? new Vector3(transform.position.x, targetHeight, transform.position.z)
-            : initialPosition;
-
-        transform.position = Vector3.MoveTowards(
-            transform.position,
-            targetPosition,
-            movementSpeed * Time.deltaTime
-        );
+    public void SetPlayerInside(bool inside)
+    {
+        playerInside = inside;
     }
 }
